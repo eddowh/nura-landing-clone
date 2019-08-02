@@ -28,6 +28,7 @@ const theme = {
     transparent: 'rgba(0, 0, 0, 0.0)',
     footer: 'rgb(203, 198, 195)',
     footerContrast: 'rgb(103, 103, 106)',
+    support: '#7B7E80',
   },
   textSize: {
     ...DefaultTheme.textSize,
@@ -89,6 +90,20 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <StyleReset />
 
+      <Button
+        prefix={
+          <Icon name="Message" color="white" size="24px" m={{ r: '0.5rem' }} />
+        }
+        pos="fixed" bottom="1rem" right="1rem"
+        rounded="circle"
+        bg="support"
+        shadow="3" hoverShadow="4"
+        textSize="subheader"
+        textWeight="800"
+        p={{ x: "1.5rem", t: '0.25rem', b: '2rem' }}
+      >
+        Support
+      </Button>
       <Div
         d="flex"
         justify="center"
