@@ -7,6 +7,7 @@ import {
   Div,
   Icon,
   Image,
+  Input,
   Row,
   Tag,
   Text,
@@ -24,7 +25,9 @@ const theme = {
     accent: 'yellow',
     brand100: '#da4370',
     brand200: '#a22a4d',
-    transparent: 'rgba(0, 0, 0, 0.0)'
+    transparent: 'rgba(0, 0, 0, 0.0)',
+    footer: 'rgb(203, 198, 195)',
+    footerContrast: 'rgb(103, 103, 106)',
   },
   textSize: {
     ...DefaultTheme.textSize,
@@ -469,111 +472,172 @@ const App = () => {
 
       <Div
         d="flex" justify="center"
-        bg="white"
+        bg="footer"
         overflow="hidden"
-        className="hero-container"
+        className="footer-container"
       >
         <Div
           d="flex"
-          flexDir={{ xs: "column", md: "row" }}
           justify="center"
           align="center"
+          w="100%"
           maxW="1200px"
-          className="hero-wrapper"
+          p={{ y: { xs : '2rem', sm: '3rem' }}}
+          className="footer-wrapper"
         >
           <Row
             w="100%"
             m="0px"
             p={{ x: { xs: '1rem' }}}
             justify="center"
+            flexDir="row-reverse"
             className="footer"
+            textColor="white"
           >
             <Col
-              size={{ xs: 12 }}
+              size={{ xs: 12, sm: 6 }}
               border={{ xs: "1px solid", sm: "0px" }}
-              borderColor="black"
-              className="footer-info-container"
+              borderColor="white"
+              className="bottom-border-only"
             >
               <Div
                 d="flex"
                 flexDir="column"
-                align="center"
-                p={{ y: { xs: '2rem' }}}
+                align={{ xs: 'center', sm: 'flex-start' }}
+                p={{ b: { xs: '2rem', sm: '0px' }}}
               >
                 <Text tag="h1" textSize="heading">
                   Newsletter
                 </Text>
                 <Text
                   tag="p"
-                  textAlign="center"
+                  d={{ sm: 'none' }}
+                  textAlign={{ xs: 'center', sm: 'left' }}
                   textSize={{ xs: "subheader", md: "subheader" }}
                 >
                   Sign up to receive latest nura news and upcoming events!
                 </Text>
-                <Button rounded="circle" bg="black" textColor="white">
+                <Input
+                  placeholder="Sign up to receive latest nura news and upcoming events!"
+                  m={{ y: { xs: '1rem', sm: '0.5rem' } }}
+                />
+                <Button w='50%' rounded="circle" bg="footerContrast" textColor="white">
                   Submit
                 </Button>
+                <br />
+                <Text tag="p" textSize="subheader">
+                  Follow Us
+                </Text>
+                <Div d="flex" flexDir="row">
+                  {
+                    ["Facebook", "Instagram", "Twitter", "Youtube"].map((text, index) => (
+                      <Text
+                        tag="p"
+                        textSize="body"
+                        p={{ r: '0.5rem' }}
+                      >
+                        {text}
+                      </Text>
+                    ))
+                  }
+                </Div>
               </Div>
             </Col>
+
             <Col
-              size={{ xs: 12 }}
+              size={{ xs: 12, sm: 3 }}
               border={{ xs: "1px solid", sm: "0px" }}
-              borderColor="black"
-              className="footer-info-container"
+              borderColor="white"
+              className="bottom-border-only"
             >
               <Div
                 d="flex"
                 flexDir="column"
-                align="center"
-                p={{ y: { xs: '1rem' }}}
+                align={{ xs: 'center' , sm: 'flex-start' }}
+                h="100%"
+                justify={{ sm: 'space-between' }}
+                p={{ y: { xs: '1rem', sm: '0px' }}}
               >
-                <Text tag="p" textSize="subheader">
-                  Contact
-                </Text>
-                <Text tag="p" textSize="subheader">
-                  Press
-                </Text>
-                <Text tag="p" textSize="subheader">
-                  Our Team
-                </Text>
-                <Text tag="p" textSize="subheader">
-                  Patents
-                </Text>
-                <Text tag="p" textSize="subheader">
-                  Upgrades
-                </Text>
-                <Text tag="p" textSize="subheader">
-                  Find a Store
-                </Text>
+                {
+                  ["Contact", "Press", "Our Team", "Patents", "Upgrades", "Find a Store"].map((text, index) => (
+                    <Text tag="p" textSize="subheader">
+                      {text}
+                    </Text>
+                  ))
+                }
               </Div>
             </Col>
-            <Col
-              size={{ xs: 12 }}
-              border={{ xs: "1px solid", sm: "0px" }}
-              borderColor="black"
-              className="footer-info-container"
-            >
+
+            <Col d={{ xs: 'none', sm: 'flex' }} size={{ sm: 3 }}>
+              <Div>
+                <Image w="65%" src="https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5bcfc426ae57fdf2a4c86af7_nura-white.png"/>
+              </Div>
+            </Col>
+
+            <Col d={{ sm: 'none' }} size={{ xs: 12 }}>
               <Div
                 d="flex"
                 flexDir="column"
                 align="center"
-                p={{ y: { xs: '1rem' }}}
+                p={{ t: { xs: '1rem' }}}
               >
                 <Text tag="p" textSize="subheader">
                   Follow Us
                 </Text>
                 <Div d="flex" flexDir="row">
-                  <Div>Facebook</Div>
-                  ---
-                  <Div>Instagram</Div>
-                  ---
-                  <Div>Twitter</Div>
-                  ---
-                  <Div>Youtube</Div>                  
+                  {
+                    ["Facebook", "Instagram", "Twitter", "Youtube"].map((text, index) => (
+                      <Text
+                        tag="p"
+                        textSize="body"
+                        p={{ x: '0.5rem' }}
+                      >
+                        {text}
+                      </Text>
+                    ))
+                  }
                 </Div>
               </Div>
             </Col>
           </Row>
+        </Div>
+      </Div>
+
+      <Div
+        d="flex" justify="center"
+        bg="footerContrast"
+        className="copyright-container"
+      >
+        <Div
+          d="flex"
+          w='100%'
+          flexDir={{ xs: 'column', xl: 'row' }}
+          justify="space-between"
+          align="center"
+          maxW="1200px"
+          p={{ y: { xs : '2rem' }}}
+          textColor="footer"
+          className="copyright-wrapper"
+        >
+          <Text
+            tag="p" textSize="body"
+            p={{ b: { xs: '0.5rem', xl: '0px' } }}
+          >
+            Copyright © 2019 Nura Operations Pty Ltd. All rights reserved.
+          </Text>
+          <Div d="flex" flexDir="row">
+            {
+              ["Warranty", "Return & Refund Policy", "Privacy", "Terms of Sale"].map((text, index) => (
+                <Text
+                  tag="p"
+                  textSize="body"
+                  p={{ x: '0.5rem' }}
+                >
+                  {text}
+                </Text>
+              ))
+            }
+          </Div>
         </Div>
       </Div>
     </ThemeProvider>
