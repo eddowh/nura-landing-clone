@@ -101,8 +101,8 @@ const App = () => {
           maxW="1200px"
           bg="white"
         >
-          <Div d="flex" p="1rem">
-            <Image w="50%" src="https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5b2c8a9fa49e8e4a4004e64c_brand_desktop.svg" w="" />
+          <Div d="flex">
+            <Image src="https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5b2c8a9fa49e8e4a4004e64c_brand_desktop.svg" w="" />
           </Div>
           <Div
             d={{ xs: "none", lg: "flex" }}
@@ -216,7 +216,7 @@ const App = () => {
             d="flex"
             flexDir="column" 
             align="center"
-            w="50vw"
+            w="55vw"
             p={{ y: '2rem', x: { md: '3.5rem'} }}
             textColor="white"
           >
@@ -366,7 +366,7 @@ const App = () => {
           flexDir={{ xs: "column", md: "row" }}
           justify="center"
           align="center"
-          p={{ y: "2rem" }}
+          p={{ t: "2rem" }}
           maxW="1200px"
           className="hero-wrapper"
         >
@@ -374,7 +374,8 @@ const App = () => {
             d="flex"
             flexDir="column"
             align="center"
-            p={{ y: '2rem', x: { xs: '1.5rem', md: '4rem'} }}
+            p={{ t: '2rem', x: { xs: '1.5rem', md: '4rem'} }}
+            className="hero-content"
           >
             <Tag rounded="circle" bg="brand100" textColor="white" textSize="body" textTransform="uppercase">
               Personalized Sound
@@ -407,6 +408,61 @@ const App = () => {
                 </Div>
               </Col>
             </Row>
+          </Div>
+        </Div>
+      </Div>      
+
+      <Div
+        d="flex" justify="center"
+        bgImg="https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5b2c8a9fa49e8e56fe04e6d7_home_immersion_desktop_clear_2x_opt.jpg"
+        bgPos="center"
+        bgSize="cover"
+        overflow="hidden"
+        className="hero-container" 
+        id="immersion-mode-hero-container"  
+      >
+        <Div
+          d="flex"
+          flexDir={{ xs: "column", md: "row" }}
+          justify="center"
+          align="center"
+          p={{ y: "2rem" }}
+          maxW="1200px"
+          className="hero-wrapper"
+          id="immersion-mode-hero-wrapper"
+        >
+          <Div
+            d="flex"
+            flexDir="column"
+            align="center"
+            p={{ y: '2rem', x: { xs: '1.5rem', md: '4rem'} }}
+            textColor="white"
+            className="hero-content"
+            id="immersion-mode-hero-content"
+          >
+            <Tag rounded="circle" bg="transparent" textColor="white" border="1px solid" borderColor="white" textSize="body" textTransform="uppercase">
+              Immersion Mode
+            </Tag>
+            <Text
+              tag="h1"
+              p={{ y: '2rem' }}
+              textSize={{ xs: "display2", sm: "display3" }}
+            >
+              Immerse Yourself
+            </Text>
+            <Text
+              tag="p"
+              textAlign="center"
+              p={{ x: { lg: '10rem' }, b: '3rem' }}
+              textSize={{ xs: "subheader", md: "subheader" }}
+            >
+              We don’t just hear music - we feel music. The nuraphone delivers bass you can feel, while maintaining crystal clear detail. It works by splitting the melodic sounds to an in-ear speaker, and the bass sounds to an over-ear tactile driver that delivers the sound through your skin.
+              <br /><br />
+              For the first time you can adjust your level of immersion. Stand at the back of the room, or in the front row.
+            </Text>
+            <Div d="block" id="phone" m="auto" w="350px" h="544px">
+              <Image src="https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5c45089779dc691a2ab5ae49_Iphone_Mockup_WithScreen_C-_1.5x.png" />
+            </Div>
           </Div>
         </Div>
       </Div>
