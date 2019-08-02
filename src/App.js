@@ -466,6 +466,116 @@ const App = () => {
           </Div>
         </Div>
       </Div>
+
+      <Div
+        d="flex" justify="center"
+        bg="white"
+        overflow="hidden"
+        className="hero-container"
+      >
+        <Div
+          d="flex"
+          flexDir={{ xs: "column", md: "row" }}
+          justify="center"
+          align="center"
+          maxW="1200px"
+          className="hero-wrapper"
+        >
+          <Row
+            w="100%"
+            m="0px"
+            p={{ x: { xs: '1rem' }}}
+            justify="center"
+            className="footer"
+          >
+            <Col
+              size={{ xs: 12 }}
+              border={{ xs: "1px solid", sm: "0px" }}
+              borderColor="black"
+              className="footer-info-container"
+            >
+              <Div
+                d="flex"
+                flexDir="column"
+                align="center"
+                p={{ y: { xs: '2rem' }}}
+              >
+                <Text tag="h1" textSize="heading">
+                  Newsletter
+                </Text>
+                <Text
+                  tag="p"
+                  textAlign="center"
+                  textSize={{ xs: "subheader", md: "subheader" }}
+                >
+                  Sign up to receive latest nura news and upcoming events!
+                </Text>
+                <Button rounded="circle" bg="black" textColor="white">
+                  Submit
+                </Button>
+              </Div>
+            </Col>
+            <Col
+              size={{ xs: 12 }}
+              border={{ xs: "1px solid", sm: "0px" }}
+              borderColor="black"
+              className="footer-info-container"
+            >
+              <Div
+                d="flex"
+                flexDir="column"
+                align="center"
+                p={{ y: { xs: '1rem' }}}
+              >
+                <Text tag="p" textSize="subheader">
+                  Contact
+                </Text>
+                <Text tag="p" textSize="subheader">
+                  Press
+                </Text>
+                <Text tag="p" textSize="subheader">
+                  Our Team
+                </Text>
+                <Text tag="p" textSize="subheader">
+                  Patents
+                </Text>
+                <Text tag="p" textSize="subheader">
+                  Upgrades
+                </Text>
+                <Text tag="p" textSize="subheader">
+                  Find a Store
+                </Text>
+              </Div>
+            </Col>
+            <Col
+              size={{ xs: 12 }}
+              border={{ xs: "1px solid", sm: "0px" }}
+              borderColor="black"
+              className="footer-info-container"
+            >
+              <Div
+                d="flex"
+                flexDir="column"
+                align="center"
+                p={{ y: { xs: '1rem' }}}
+              >
+                <Text tag="p" textSize="subheader">
+                  Follow Us
+                </Text>
+                <Div d="flex" flexDir="row">
+                  <Div>Facebook</Div>
+                  ---
+                  <Div>Instagram</Div>
+                  ---
+                  <Div>Twitter</Div>
+                  ---
+                  <Div>Youtube</Div>                  
+                </Div>
+              </Div>
+            </Col>
+          </Row>
+        </Div>
+      </Div>
     </ThemeProvider>
   );
 }
