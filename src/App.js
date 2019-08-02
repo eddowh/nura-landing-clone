@@ -24,6 +24,7 @@ const theme = {
     accent: 'yellow',
     brand100: '#da4370',
     brand200: '#a22a4d',
+    transparent: 'rgba(0, 0, 0, 0.0)'
   },
   textSize: {
     ...DefaultTheme.textSize,
@@ -100,7 +101,9 @@ const App = () => {
           maxW="1200px"
           bg="white"
         >
-          <Image src="https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5b2c8a9fa49e8e4a4004e64c_brand_desktop.svg" w="" />
+          <Div d="flex" p="1rem">
+            <Image w="50%" src="https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5b2c8a9fa49e8e4a4004e64c_brand_desktop.svg" w="" />
+          </Div>
           <Div
             d={{ xs: "none", lg: "flex" }}
             flexDir="row" align="center"
@@ -145,7 +148,10 @@ const App = () => {
         </Div>
       </Div>
 
-      <Div d="flex" justify="center" className="hero-container" bg="brand100">
+      <Div d="flex" justify="center" className="hero-container"
+        bgImg="https://assets.website-files.com/5b2c8a9fa49e8e2d4604e60b/5cdd0eb8ee894c2a5cad42eb_Group%202.jpg"
+        bgSize="cover"
+      >
         <Div
           d="flex"
           flexDir={{ xs: "column", md: "row-reverse" }}
@@ -160,6 +166,7 @@ const App = () => {
             align="center"
             w="50vw"
             p={{ y: '2rem', x: { md: '3.5rem'} }}
+            textColor="white"
           >
             <Text
               tag="h1"
@@ -176,7 +183,13 @@ const App = () => {
               Get the Nuraphone now from just $9/mth.
             </Text>
             <Div d="flex" m={{ t: "1rem" }} justify="center" w='100%'>
-              <Button w={{ xs: '85%', md: '70%' }} textSize="subheader">
+              <Button
+                w={{ xs: '85%', md: '70%' }}
+                textSize="subheader"
+                bg="transparent"
+                border="1px solid"
+                borderColor="white"
+              >
                 Discover more
               </Button>
             </Div>
