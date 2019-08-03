@@ -230,7 +230,7 @@ const Website = () => {
             flexDir="column" 
             align="center"
             w="50vw"
-            p={{ y: '2rem', x: { md: '1rem'} }}
+            p={{ y: '2rem', x: { md: '2rem'} }}
           >
             <Text
               tag="h1"
@@ -280,13 +280,15 @@ const Website = () => {
           <Div
             d="flex"
             flexDir="column"
-            align="center"
+            align="flex-start"
             maxW="600px"
-            p={{ y: '2rem', x: { xs: '1rem', md: '1rem'} }}
+            textColor="white"
+            p={{ y: '2rem', x: { xs: '1rem', md: '2rem'} }}
           >
             <Text
               tag="h1"
-              textSize={{ xs: "display2", sm: "display3" }}
+              textAlign="left"
+              textSize={{ xs: "heading", sm: "heading" }}
             >
               Introducing — SoundStudio™
             </Text>
@@ -300,7 +302,10 @@ const Website = () => {
               the nuraphone and discover Music in Full Colour™.
             </Text>
             <Div d="flex" m={{ t: "1rem" }} justify="flex-start" w='100%'>
-              <Button textSize="subheader">
+              <Button bg="transparent" textSize="subheader"
+                p={{ x: "1.5rem" }} h="3rem"
+                border="1px solid" borderColor="white"
+              >
                 Find out more about SoundStudio™ >
               </Button>
             </Div>
