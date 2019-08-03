@@ -34,7 +34,7 @@ const Website = () => {
         shadow="3" hoverShadow="4"
         textSize="subheader"
         textWeight="800"
-        p={{ x: "1.5rem", t: '0.25rem', b: '2rem' }}
+        p={{ x: '2rem' }} h="3.5rem"
       >
         Support
       </Button>
