@@ -127,9 +127,6 @@ const Website = () => {
             >
               <b>nura</b>now
             </Text>
-            <ResponsiveContext.Consumer>
-            {size => (<Text>{size}</Text>)}
-            </ResponsiveContext.Consumer>
             <Text
               tag="p"
               textAlign="center"
