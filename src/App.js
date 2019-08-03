@@ -547,6 +547,7 @@ const App = () => {
                   {
                     ["Facebook", "Instagram", "Twitter", "Youtube"].map((text, index) => (
                       <Text
+                        key={index}
                         tag="p"
                         textSize="body"
                         p={{ r: '0.5rem' }}
@@ -575,7 +576,7 @@ const App = () => {
               >
                 {
                   ["Contact", "Press", "Our Team", "Patents", "Upgrades", "Find a Store"].map((text, index) => (
-                    <Text tag="p" textSize="subheader">
+                    <Text key={index} tag="p" textSize="subheader">
                       {text}
                     </Text>
                   ))
@@ -603,6 +604,7 @@ const App = () => {
                   {
                     ["Facebook", "Instagram", "Twitter", "Youtube"].map((text, index) => (
                       <Text
+                        key={index}
                         tag="p"
                         textSize="body"
                         p={{ x: '0.5rem' }}
@@ -644,6 +646,7 @@ const App = () => {
             {
               ["Warranty", "Return & Refund Policy", "Privacy", "Terms of Sale"].map((text, index) => (
                 <Text
+                  key={index}
                   tag="p"
                   textSize="body"
                   p={{ x: '0.5rem' }}
