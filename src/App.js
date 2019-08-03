@@ -5,7 +5,7 @@ import theme from './theme';
 import ResponsiveContext from './contexts/ResponsiveContext';
 import { getBreakpoint } from './utils/responsive';
 
-import Website from './Website';
+import Website from './components/Website';
 
 class App extends Component {
   state = {};

@@ -12,11 +12,13 @@ import {
   Text,
 } from 'atomize';
 
-import './App.css';
-import ResponsiveContext from './contexts/ResponsiveContext';
+import '../App.css';
+import ResponsiveContext from '../contexts/ResponsiveContext';
 
-import navbarLinks from './data/navbarLinks';
-import soundPersonalizationProfiles from './data/soundPersonalizationProfiles';
+import navbarLinks from '../data/navbarLinks';
+import soundPersonalizationProfiles from '../data/soundPersonalizationProfiles';
+
+import SupportButton from './SupportButton';
 
 const Website = () => {
   const navbarTextSize = { xs: "subheader", lg: "body", xl: "subheader" };
@@ -24,21 +26,8 @@ const Website = () => {
 
   return (
     <React.Fragment>
-      <Button
-        prefix={
-          <Icon name="Message" color="white" size="24px" m={{ r: '0.5rem' }} />
-        }
-        pos="fixed" bottom="1rem" right="1rem"
-        rounded="circle"
-        bg="support"
-        shadow="3" hoverShadow="4"
-        textSize="subheader"
-        textWeight="800"
-        p={{ x: '2rem' }} h="3.5rem"
-      >
-        Support
-      </Button>
-
+      <SupportButton />
+      
       <Div
         d="flex"
         justify="center"
