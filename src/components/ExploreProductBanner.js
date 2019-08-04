@@ -121,7 +121,7 @@ class ExploreProductBanner extends Component {
               </Text>
               <Text
                 tag="p"
-                textAlign="left"
+                textAlign={{ xs: 'center', lg: 'left' }}
                 p={{ y: { md: '1.5rem' }}}
                 textSize={{ xs: "subheader", md: "subheader", lg: "heading" }}
               >
@@ -133,7 +133,7 @@ class ExploreProductBanner extends Component {
                    that automatically learns and adapts to your unique hearing."
                 )}
               </Text>
-              <Div d="flex" m={{ t: "1rem" }} justify="flex-start" w='100%'>
+              <Div d="flex" m={{ t: "1rem" }} justify={{ xs: 'center', 'lg': 'flex-start' }} w='100%'>
                 <Button
                   w={{ xs: '85%', md: '70%' }} textSize="subheader"
                   bg="transparent" border="1px solid" borderColor="white"
