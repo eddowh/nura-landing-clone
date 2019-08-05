@@ -14,6 +14,7 @@ const SupportButton = () => (
     textSize="subheader"
     textWeight="800"
     p={{ x: '1.5rem' }} h="3rem"
+    style={{ zIndex: 9999 }}
   >
     Support
   </Button>
