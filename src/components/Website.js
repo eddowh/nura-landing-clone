@@ -14,80 +14,17 @@ import {
 
 import '../App.css';
 
-import navbarLinks from '../data/navbarLinks';
 
 import SupportButton from './SupportButton';
+import Navbar from './Navbar';
 import ExploreProductBanner from './ExploreProductBanner';
 import PersonalizedSoundBanner from './PersonalizedSoundBanner';
 
 const Website = () => {
-  const navbarTextSize = { xs: "subheader", lg: "body", xl: "subheader" };
-
   return (
     <React.Fragment>
       <SupportButton />
-      
-      <Div
-        d="flex"
-        justify="center"
-        p={{ x: { xs: '0px', sm: '1rem' }}}
-        className="navbar"
-      >
-        <Div
-          d="flex"
-          p={{ xs: "1rem", lg: "0.5rem" }}
-          justify="space-between"
-          flexDir="row"
-          w="100%"
-          maxW="1200px"
-          bg="white"
-        >
-          <Div d="flex">
-            <Image src="https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5b2c8a9fa49e8e4a4004e64c_brand_desktop.svg" w="" />
-          </Div>
-          <Div
-            d={{ xs: "none", lg: "flex" }}
-            flexDir="row" align="center"
-          >
-            {
-              navbarLinks.map((item, index) => {
-                return (
-                  <Text
-                    key={index}
-                    m={{ x: "8px" }}
-                    tag="p"
-                    textSize={navbarTextSize}
-                  >
-                    {item.text}
-                  </Text>
-                )
-              })
-            }
-          </Div>
-          <Div d="flex" flexDir="row" align="center">
-            <Text d={{ xs: "none", lg: "flex" }} tag="p" textSize={navbarTextSize} >
-              Support
-            </Text>
-            <Button
-              d={{ xs: "none", md: "flex" }}
-              p={{ x: "1rem" }}
-              h="36px"
-              textSize={navbarTextSize}
-              textColor="white"
-              hoverTextColor="info900"
-              bg="brand100"
-              hoverBg="info200"
-              border="1px solid"
-              borderColor="brand200"
-              hoverBorderColor="info900"
-              m={{ x: ".75rem" }}
-            >
-              Buy Now
-            </Button>
-            <Icon d={{ lg: "none" }} name="Menu" color="black" size="24px" />
-          </Div>
-        </Div>
-      </Div>
+      <Navbar />
 
       <Div d="flex" justify="center" className="hero-container"
         bgImg="https://assets.website-files.com/5b2c8a9fa49e8e2d4604e60b/5cdd0eb8ee894c2a5cad42eb_Group%202.jpg"
