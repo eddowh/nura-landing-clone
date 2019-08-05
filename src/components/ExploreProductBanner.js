@@ -56,7 +56,6 @@ class ExploreProductBanner extends Component {
 
   getBgImgCoverSrc = (responsiveSize) => {
     if (!responsiveSize) return;
-    console.log(responsiveSize);
 
     let deviceBackgroundImages;
     if (responsiveSize === 'xs' || responsiveSize === 'sm')
