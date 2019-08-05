@@ -43,7 +43,7 @@ class SoundPersonalizationImages extends Component {
     let translateX = `translateX(-${(activeProfileIndex % 3) * 100}%)`;
     let visibility = (activeProfileIndex === index) ? '' : 'hidden';
     let zIndex = activeProfileIndex + index;
-    let transition = (activeProfileIndex === index) ? 'opacity 1000ms ease 0s' : '';
+    let transition = 'opacity 1000ms ease 0s';
     let opacity = (activeProfileIndex === index) ? 1 : 0;
 
     if (this.state.halftime) {
@@ -55,7 +55,7 @@ class SoundPersonalizationImages extends Component {
         translateX = `translateX(-${((activeProfileIndex + 1) % 3) * 100}%)`;
         visibility = '';
         zIndex += 3;
-        transition = 'opacity 1000ms ease 0s';
+        // transition = 'opacity 1000ms ease 0s';
         opacity = 1;
       }
     }
