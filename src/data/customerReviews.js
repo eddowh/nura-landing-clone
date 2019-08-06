@@ -1,4 +1,4 @@
-const reviews = [
+const customerReviews = [
   {
     reviewer: "Ramón C.",
     title: "Great experience",
@@ -91,4 +91,4 @@ const reviews = [
   },
 ];
 
-export default reviews;
+export default customerReviews;
