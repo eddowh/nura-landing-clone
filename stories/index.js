@@ -126,7 +126,6 @@ class CarouselItemList extends React.Component {
     this.containerListRef = React.createRef();
     this.state = {
       containerWidth: null,
-      containerHeight: null,
     }
   }
 
@@ -142,13 +141,12 @@ class CarouselItemList extends React.Component {
   onResize = () => {
     this.setState({
       carouselWidth: this.containerListRef.current.parentNode.clientWidth,
-      containerHeight: this.containerListRef.current.clientHeight,
     });
   }
 
   render () {    
     const { itemIndex } = this.props;
-    const { carouselWidth, containerHeight } = this.state;
+    const { carouselWidth } = this.state;
 
     const carouselItems = this.props.children;
 
