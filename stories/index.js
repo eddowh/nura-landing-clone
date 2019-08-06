@@ -148,7 +148,7 @@ const ReviewItem = ({ review }) => (
     d="flex"
     flexDir="column"
     justify="space-between"
-    className="review-wrapper"
+    className="carousel-item-wrapper review-wrapper"
     p="1.5rem"
   >
     <Div
@@ -363,7 +363,7 @@ class Carousel extends React.Component {
                   h="4rem" p="0px" w="100%" bg="transparent"
                   className="carousel-slide-right-button"
                 >
-                  <Icon name="LeftArrow" size="48px" color="gray800" />
+                  <Icon name="RightArrow" size="48px" color="gray800" />
                 </Button>
               </Div>
             </Col>
