@@ -37,14 +37,11 @@ class ReviewContainerList extends React.Component {
     this.setState({
       carouselWidth: this.containerListRef.current.parentNode.clientWidth,
       containerHeight: this.containerListRef.current.clientHeight,
-    })
-    console.log(this.containerListRef.current.clientHeight);
-    console.log(this.containerListRef.current.getBoundingClientRect());
-
+    });
   }
 
   render () {    
-    const { itemIndex } = this.props;
+    const { itemIndex, reviews } = this.props;
     const { carouselWidth, containerHeight } = this.state;
 
     const slicedReviews = reviews.slice(0, reviews.length);
@@ -61,6 +58,7 @@ class ReviewContainerList extends React.Component {
           lg: `translateX(${-itemIndex * carouselWidth / 4}px)`,
         }}
         w={carouselWidth * slicedReviews.length + 'px'}
+        transition="all 0.5s ease-in-out"
       >
         {
           slicedReviews.map((review, index) => (
@@ -145,7 +143,7 @@ class ReviewContainerList extends React.Component {
   }
 }
 
-class Carousel extends React.Component {
+class ReviewsCarousel extends React.Component {
   state = {
     itemIndex: 0,
   }
@@ -190,7 +188,7 @@ class Carousel extends React.Component {
               className="text-carousel-content"
               overflow="hidden"
             >
-              <ReviewContainerList itemIndex={this.state.itemIndex} />
+              <ReviewContainerList itemIndex={this.state.itemIndex} reviews={this.props.reviews} />
             </Col>
             <Col size={1} bg="white">
               <Div w="100%" onClick={this.incrementIndex}>
@@ -206,7 +204,7 @@ class Carousel extends React.Component {
   }
 }
 
-storiesOf('Button', module)
-  .add('with text', () => (
-    <Carousel />
+storiesOf('ReviewsCarousel', module)
+  .add('example', () => (
+    <ReviewsCarousel reviews={reviews} />
   ));
