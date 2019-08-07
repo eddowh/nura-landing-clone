@@ -34,6 +34,7 @@ const rightColumnStyle = {
   tag: "body",
   textSize: "subtitle",
   textWeight: "inherit",
+  w: "unset",
 }
 
 const SpecificationBanner = () => (
@@ -144,12 +145,12 @@ const SpecificationBanner = () => (
             Need more info?
           </Text>
         </Col>
-        <Col size={7} d="flex" flexDir="row">
+        <Col size={7} d="flex" flexDir="row" align="center">
           <Text {...rightColumnStyle}>
             Visit our support section and we'll be happy to assist.
           </Text>
           <Button bg="transparent">
-            <Icon name="RightArrowSolid" />
+            <Icon name="RightArrowSolid" size="36px" />
           </Button>
         </Col>
       </Row>
