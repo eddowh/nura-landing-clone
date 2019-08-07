@@ -23,10 +23,10 @@ const techSpecs = {
 
 const leftColumnStyle = {
   tag: "h2",
-  textSize: "display1",
+  textSize: { xs: "header", sm: "display1" },
   textWeight: "inherit",
   m: {
-    t: '-0.5rem',
+    t: { xs: '0px', sm: '-0.5rem' },
   },
 }
 
