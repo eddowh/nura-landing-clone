@@ -18,6 +18,7 @@ const theme = {
     ...DefaultTheme.textSize,
     size: {
       ...DefaultTheme.textSize.size,
+      subtitle: '20px',
       hero: '72px',
       heroLg: '96px',
     }
