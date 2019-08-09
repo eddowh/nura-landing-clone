@@ -13,13 +13,14 @@ import {
 } from 'atomize';
 
 import '../App.css';
+import './Website.css';
 
 
 import SupportButton from './SupportButton';
 import Navbar from './Navbar';
 import ExploreProductBanner from './ExploreProductBanner';
 import PersonalizedSoundBanner from './PersonalizedSoundBanner';
-import CustomerReviewsCarouselBanner from './CustomerReviewsCarouselBanner';
+import UserReviewsBanner from './UserReviewsBanner';
 
 
 const Website = () => {
@@ -195,33 +196,7 @@ const Website = () => {
       </Div>
 
       <PersonalizedSoundBanner />
-
-      <Div
-        d="flex"
-        justify="center"
-        w="100%"
-        bg="white"
-        className="hero-container" 
-        id="user-reviews-hero-container"
-        overflow="hidden"
-      >
-        <Div
-          d="flex"
-          flexDir={{ xs: "column", md: "row" }}
-          justify="center"
-          align="center"
-          p={{ y: "4rem" }}
-          w="100%"
-          maxW="1200px"
-          className="hero-wrapper"
-          id="user-reviews-hero-wrapper"
-        >
-          <CustomerReviewsCarouselBanner
-            fontFamily="primary" textWeight="400"
-            bg="white" w="100%" maxW="100%"
-          />
-        </Div>
-      </Div>
+      <UserReviewsBanner />
       
       <Div
         d="flex" justify="center"

@@ -1,0 +1,15 @@
+/**
+ * Common base CSS attributes for container
+ * and wrapper components
+ */
+
+.hero-container {
+  display: flex;
+  width: 100%;
+}
+
+.hero-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
