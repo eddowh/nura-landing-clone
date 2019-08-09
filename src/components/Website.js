@@ -19,6 +19,8 @@ import SupportButton from './SupportButton';
 import Navbar from './Navbar';
 import ExploreProductBanner from './ExploreProductBanner';
 import PersonalizedSoundBanner from './PersonalizedSoundBanner';
+import CustomerReviewsCarouselBanner from './CustomerReviewsCarouselBanner';
+
 
 const Website = () => {
   return (
@@ -194,6 +196,33 @@ const Website = () => {
 
       <PersonalizedSoundBanner />
 
+      <Div
+        d="flex"
+        justify="center"
+        w="100%"
+        bg="white"
+        className="hero-container" 
+        id="user-reviews-hero-container"
+        overflow="hidden"
+      >
+        <Div
+          d="flex"
+          flexDir={{ xs: "column", md: "row" }}
+          justify="center"
+          align="center"
+          p={{ y: "4rem" }}
+          w="100%"
+          maxW="1200px"
+          className="hero-wrapper"
+          id="user-reviews-hero-wrapper"
+        >
+          <CustomerReviewsCarouselBanner
+            fontFamily="primary" textWeight="400"
+            bg="white" w="100%" maxW="100%"
+          />
+        </Div>
+      </Div>
+      
       <Div
         d="flex" justify="center"
         bgImg="https://www.nuraphone.com/cdn/5b2c8a9fa49e8e2d4604e60b/5b2c8a9fa49e8e56fe04e6d7_home_immersion_desktop_clear_2x_opt.jpg"
