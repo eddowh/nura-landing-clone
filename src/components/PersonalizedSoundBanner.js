@@ -18,6 +18,7 @@ class PersonalizedSoundBanner extends Component {
           d="flex" justify="center"
           bg="gray100"
           className="hero-container" 
+          overflow="hidden"
         >
           <Div
             d="flex"
