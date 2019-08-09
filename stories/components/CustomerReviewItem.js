@@ -13,7 +13,7 @@ const CustomerReviewItem = ({ review }) => (
     flexDir="column"
     justify="space-between"
     className="carousel-item-wrapper customer-review-wrapper"
-    p="1.5rem"
+    p={{ t: '3.5rem', x: '1.5rem' }}
   >
     <Div
       d="flex" flexDir="column"

@@ -123,6 +123,7 @@ const CarouselContent = ({ itemIndex, children }) => (
     bg="white"
     className="carousel-content"
     overflow="hidden"
+    p="0px"
   >
     <CarouselItemList itemIndex={itemIndex} >
       {children}
@@ -151,12 +152,7 @@ class Carousel extends React.Component {
     const { itemIndex } = this.state;
 
     return (
-      <Div
-        w="100%" bg="white"
-        className="carousel-container"
-        p={{ y: "4rem" }}
-        fontFamily="primary"
-      >
+      <Div {...this.props}>
         <Row
           className="carousel-wrapper"
           w="100%"

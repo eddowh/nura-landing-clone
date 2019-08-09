@@ -23,16 +23,14 @@ import SpecificationBanner from './components/SpecificationBanner';
 /**
  * [START] Carousel stories
  */
-const CustomerReviewsCarousel = () => (
-  <ThemeProvider theme={theme}>
-    <Carousel>
-      {
-        customerReviews.map((review, index) => (
-          <CustomerReviewItem key={index} review={review} />
-        ))
-      }
-    </Carousel>
-  </ThemeProvider>
+const CustomerReviewsCarousel = (props) => (
+  <Carousel {...props}>
+    {
+      customerReviews.map((review, index) => (
+        <CustomerReviewItem key={index} review={review} />
+      ))
+    }
+  </Carousel>
 );
 
 const ExpertReviewsCarousel = () => (
@@ -49,7 +47,24 @@ const ExpertReviewsCarousel = () => (
 
 storiesOf('Carousel', module)
   .add('customer reviews', () => (
-    <CustomerReviewsCarousel />
+    <ThemeProvider theme={theme}>
+      <Div bg="white" p={{ y: '2rem' }} fontFamily="primary" textWeight="400">
+        <Div bg="brand500">
+          <Text
+            tag="h1" textSize="display2"
+            bg="white" textAlign="center"
+            textWeight="inherit"
+          >
+              User Reviews
+          </Text>
+        </Div>
+        <CustomerReviewsCarousel 
+          w="100%" bg="white"
+          className="carousel-container"
+          p={{ y: "0rem" }}
+        />
+      </Div>
+    </ThemeProvider>
   ))
   .add('expert reviews', () => (
     <ExpertReviewsCarousel />
